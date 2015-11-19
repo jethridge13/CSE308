@@ -1,0 +1,115 @@
+@import url("http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css");
+
+body {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+#logo_bar {
+    height: 100px;
+    top: 0;
+    position: relative;
+    line-height: 68px;
+    display: block;
+    margin-left: 30%;
+}
+
+#notification_bar {
+    width: 15%;
+    //height: 1200px;
+    float: left;
+    text-align: center;
+    position: relative;
+    //background-color: mediumaquamarine;
+    overflow-y: scroll;
+}
+
+#controls {
+    height: 500px;
+    width: 80%;
+    float: left;
+    text-align: center;
+    background-color: azure;
+    z-index: 1;
+}
+
+#import_button {
+    text-align: left;
+    position: relative;
+    left: -40%;
+    top: 300px;
+    z-index: 10;
+}
+
+#update_button {
+    text-align: left;
+    position: relative;
+    right: -40%;
+    top: 300px;
+    z-index: 10;
+}
+
+#calendar {
+    height: 700px;
+    width: 80%;
+    position: relative;
+    top: 50px;
+    right: 0;
+    left: 15%;
+}
+
+#calendar_table {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+.month_header {
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    height: 10%;
+    background-color: lightblue;
+}
+
+.day_header {
+    height: 10%;
+    text-align: center;
+    border: 1px solid black;
+    width: 20%;
+    background-color: lightsalmon;
+}
+
+.day_box {
+    height: 16%;
+    text-align: left;
+    border: 1px solid black;
+    vertical-align: top;
+    width: 20%;
+    background-color: lightcyan;
+}
+
+.day_box_select {
+    height: 16%;
+    text-align: left;
+    border: 1px solid black;
+    vertical-align: top;
+    width: 20%;
+    background-color: lightgreen;
+}
+
+.calendar_row {
+
+}
+
+.calendar_button_left {
+    float: left;
+}
+
+.calendar_button_right {
+    float: right;
+}
