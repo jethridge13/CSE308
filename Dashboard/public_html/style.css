@@ -17,7 +17,7 @@ body {
 
 #notification_bar {
     width: 15%;
-    //height: 1200px;
+    height: 800px;
     float: left;
     text-align: center;
     position: relative;
@@ -53,10 +53,11 @@ body {
 #calendar {
     height: 700px;
     width: 80%;
-    position: relative;
-    top: 50px;
+    position: absolute;
+    top: 600px;
     right: 0;
     left: 15%;
+    bottom: 200px;
 }
 
 #calendar_table {
