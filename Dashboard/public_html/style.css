@@ -16,19 +16,18 @@ body {
 }
 
 #notification_bar {
-    width: 15%;
+    width: 300px;
     height: 800px;
     float: left;
     text-align: center;
     position: relative;
-    //background-color: mediumaquamarine;
+    background-color: mediumaquamarine;
     overflow-y: scroll;
 }
 
 #controls {
     height: 500px;
-    width: 80%;
-    float: left;
+    overflow: hidden;
     text-align: center;
     background-color: azure;
     z-index: 1;
@@ -52,12 +51,9 @@ body {
 
 #calendar {
     height: 700px;
-    width: 80%;
-    position: absolute;
-    top: 600px;
-    right: 0;
-    left: 15%;
-    bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    top: 0px;
 }
 
 #calendar_table {
