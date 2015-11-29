@@ -2,6 +2,23 @@ var studentURL = "./Student.html";
 var instructorURL = "./Instructor.html";
 var adminURL = "./admin.html";
 
+$(document).ready(function(){
+    var userfield = $("#NetID");
+    var passfield = $("#password");
+    
+    userfield.keydown(function(e){
+        if (e.keyCode === 13) {
+            auth();
+        }
+    });
+    
+    passfield.keydown(function(e){
+        if (e.keyCode === 13) {
+            auth();
+        }
+    });
+});
+
 window.onload = function() {
     $("#loginFailAlert").hide();
 };

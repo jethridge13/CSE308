@@ -53,7 +53,7 @@ body {
     height: 700px;
     overflow: hidden;
     position: relative;
-    top: 0px;
+    top: -20px;
 }
 
 #calendar_table {
