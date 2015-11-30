@@ -115,3 +115,7 @@
 .calendar_button_right {
     float: right;
 }
+
+#create_exam_button {
+    background-color: blue;
+}
