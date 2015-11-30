@@ -5,51 +5,54 @@
         <title>Admin Dashboard</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="">
-        <link rel="stylesheet" href="style.css">
         
-        <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
     </head>
 
     <body>
-        <script src="main.js"></script>
-        <header id="logo_bar">
-            <div style="margin-left: auto; margin-right: auto; height: 68px;">
-                <a href="http://www.stonybrook.edu/">
-                    <img 
-                        src="./stony-brook-university-logo.jpg" alt="Stony Brook University"
-                        style="float: left; vertical-align: middle;">
-                </a>
+        <div class="content">
+            <header class="logo_bar">
+                <div style="margin-left: auto; margin-right: auto; height: 68px;">
+                    <a href="http://www.stonybrook.edu/">
+                        <img
+                            class="logo_img"
+                            src="./stony-brook-university-logo.jpg" alt="Stony Brook University"
+                        >
+                    </a>
 
-                <!--<a href="index.html">
-                    <h1>
-                        Testing Center
-                    </h1>
-                </a>-->
+                    <!--<a href="index.html">
+                        <h1>
+                            Testing Center
+                        </h1>
+                    </a>-->
+                </div>
+            </header>
+
+            <div class="well well-lg" id="notification_bar">
+                <h1>Notifications</h1>
             </div>
-        </header>
 
-        <div class="well well-lg" id="notification_bar">
-            <h1>Notifications</h1>
-        </div>
+            <div class="well" id="controls">
+                <h1>Utilization</h1>
 
-        <div class="well" id="controls">
-            <h1>Utilization</h1>
+                <button
+                    id="import_button"
+                    class="btn btn-default">
+                    Import
+                </button>
 
-            <button
-                id="import_button"
-                class="btn btn-default">
-                Import
-            </button>
-
-            <button
-                id="update_button"
-                class="btn btn-default">
-                Update
-            </button>
-        </div>
+                <button
+                    id="update_button"
+                    class="btn btn-default">
+                    Update
+                </button>
+            </div>
 
             <div class="well-lg" id="calendar">
                 <table id="calendar_table">
@@ -192,5 +195,6 @@
                     </tr>
                 </table>
             </div>
+        </div>
     </body>
 </html>
