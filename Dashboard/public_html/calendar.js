@@ -140,31 +140,11 @@ $(document).ready(function() {
         }
         
         leftButton.addEventListener("click", prevMonth);
+        
+        var event = new CustomEvent("initialized", {});
+        
+        $("#calendar")[0].dispatchEvent(event);
     }
     
     initializeCalendar(d);
-    
-    function initializeImport() {
-        var import_button = $("#import_button")[0];
-        
-        function importClick() {
-            console.log("IMPORT_BUTTON_CLICKED");
-        }
-        
-        $(import_button).click(importClick);
-    }
-    
-    initializeImport();
-    
-    function initializeUpdate() {
-        var update_button = $("#update_button")[0];
-        
-        function updateClick() {
-            console.log("UPDATE BUTTON CLICKED");
-        }
-        
-        $(update_button).click(updateClick);
-    }
-    
-    initializeUpdate();
 });
