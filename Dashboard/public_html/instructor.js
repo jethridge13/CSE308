@@ -17,5 +17,12 @@ $(document).ready(function(){
         var date_begin = $("#create_exam_date_begin_input").val();
         var date_end = $("#create_exam_date_end_input").val();
         var section = $("#create_exam_section_input").val();
+        
+        $("#create_exam_submit").prop("class", "btn btn-default btn-warning");
+        $("#create_exam_submit").html("<span id='create_exam_loading_icon' class='glyphicon glyphicon-refresh glyphicon-refresh-animate'></span> Submitting...");
+        
+        $("#create_exam_date_begin_input").val("");
+        $("#create_exam_date_end_input").val("");
+        $("#create_exam_section_input").val("");
     });
 });
