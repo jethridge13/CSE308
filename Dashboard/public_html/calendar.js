@@ -69,14 +69,17 @@ $(document).ready(function() {
         var first_day = day - (date % 7 - 1);
         var box_date = 1;
 
-        if (first_day === 0) {
+        if (first_day === 0) { // SUNDAY = 01
             box_date++;
             first_day++;
-        }
-        
-        for (var col = 0; col < first_day - 1; col++) {
-            day_boxes[col].innerHTML = "";
-            day_boxes[col].hasEvent = false;
+        } else if (first_day === 6) { // SATURDAY = 01
+            box_date += 2;
+            first_day = 1;
+        } else {
+            for (var col = 0; col < first_day - 1; col++) {
+                day_boxes[col].innerHTML = "";
+                day_boxes[col].hasEvent = false;
+            }
         }
         
         var selected_date = null;
