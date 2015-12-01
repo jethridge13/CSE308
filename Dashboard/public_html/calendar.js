@@ -3,11 +3,9 @@ $(document).ready(function() {
     
     function initializeCalendar(d) {
         var today = new Date();
-        
         var date = d.getDate();
         var day = d.getDay();
         var month = d.getMonth();
-
         var month_header = $("#month_header1")[0];
 
         var months = [
@@ -49,8 +47,19 @@ $(document).ready(function() {
 
         var day_boxes = [];
 
+        // INITIALIZE DAY BOX REFERENCES
         for (var i = 0; i < 25; i++) {
-            day_boxes.push($("#day_box" + (i + 1))[0]);
+            var element = $("#day_box" + (i + 1));
+            
+            element[0].hasEvent = true;
+            
+            element.dblclick(function(){
+                var event = new Event("day_click");
+                event.element = element[0];
+                $("#calendar")[0].dispatchEvent(event);
+            });
+            
+            day_boxes.push(element[0]);
         }
 
         var first_day = day - (date % 7 - 1);

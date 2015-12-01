@@ -40,4 +40,14 @@ $(document).ready(function(){
         $("#create_exam_date_end_input").val("");
         $("#create_exam_section_input").val("");
     });
+    
+    $("#calendar")[0].addEventListener("day_click", function(e){
+        var element = e.element;
+        
+        if (element.hasEvent) {
+            console.log("HAS_EVENT");
+        } else {
+            console.log("NO_EVENT");
+        }
+    });
 });
