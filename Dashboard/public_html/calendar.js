@@ -154,6 +154,12 @@ $(document).ready(function() {
         
         leftButton.addEventListener("click", prevMonth);
         
+        for (var i = 0; i < 25; i++) {
+            if (day_boxes[i].hasEvent) {
+                day_boxes[i].innerHTML += "<table class='event table'><tr><th>Exams Scheduled...</th></tr></table>";
+            }
+        }
+        
         var event = new Event("initialized");
         
         $("#calendar")[0].dispatchEvent(event);
