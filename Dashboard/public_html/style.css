@@ -73,7 +73,7 @@
     border: 1px solid black;
     vertical-align: top;
     width: 20%;
-    background-color: lightcyan;
+    background-color: lightcoral;
 }
 
 .day_box_select {
@@ -126,4 +126,5 @@
 
 .event {
     background-color: white;
+    border-radius: 5px;
 }

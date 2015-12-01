@@ -44,10 +44,12 @@ $(document).ready(function(){
     $("#calendar")[0].addEventListener("day_click", function(e){
         var element = e.element;
         
-        element.innerHTML += "<table class='event'><tr><th>Event Scheduled...</th></tr></table>";
+        element.innerHTML += "<table class='event table'><tr><th>Exams Scheduled...</th></tr></table>";
         
         if (element.hasEvent) {
             console.log("HAS_EVENT");
+            
+            $("#view_exam").modal("show");
         } else {
             console.log("NO_EVENT");
         }
