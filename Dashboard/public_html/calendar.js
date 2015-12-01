@@ -46,9 +46,8 @@ $(document).ready(function() {
         rightButton.appendChild(rightSpan);
 
         var day_boxes = [];
-
-        // INITIALIZE DAY BOX REFERENCES
-        for (var i = 0; i < 25; i++) {
+        
+        function initBox(i) {
             var element = $("#day_box" + (i + 1));
             
             element[0].hasEvent = true;
@@ -60,6 +59,11 @@ $(document).ready(function() {
             });
             
             day_boxes.push(element[0]);
+        }
+
+        // INITIALIZE DAY BOX REFERENCES
+        for (var i = 0; i < 25; i++) {
+            initBox(i);
         }
 
         var first_day = day - (date % 7 - 1);
@@ -150,7 +154,7 @@ $(document).ready(function() {
         
         leftButton.addEventListener("click", prevMonth);
         
-        var event = new CustomEvent("initialized", {});
+        var event = new Event("initialized");
         
         $("#calendar")[0].dispatchEvent(event);
     }
