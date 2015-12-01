@@ -162,6 +162,7 @@ $(document).ready(function() {
         for (var i = 0; i < 25; i++) {
             if (day_boxes[i].hasEvent) {
                 day_boxes[i].innerHTML += "<table class='event table'><tr><th>Exams Scheduled...</th></tr></table>";
+                $(day_boxes[i]).css("cursor", "pointer");
             }
         }
         

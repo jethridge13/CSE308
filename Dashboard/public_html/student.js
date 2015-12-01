@@ -14,4 +14,7 @@ $(document).ready(function(){
             $("#view_exam").modal("show");
         }
     });
+    
+    $("#notification_bar")[0].innerHTML += "<table class='event table notify'><tr><th>Exam</th></tr><tr><th>Class</th></tr></table>";
+    $("#notification_bar")[0].innerHTML += "<table class='event table notify'><tr><th>Exam</th></tr><tr><th>Class</th></tr></table>";
 });
