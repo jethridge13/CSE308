@@ -76,6 +76,7 @@ $(document).ready(function() {
         
         for (var col = 0; col < first_day - 1; col++) {
             day_boxes[col].innerHTML = "";
+            day_boxes[col].hasEvent = false;
         }
         
         var selected_date = null;
@@ -99,6 +100,7 @@ $(document).ready(function() {
             for (var col = 1; col < 6; col++) {
                 if (box_date > num_days[month]) {
                     day_boxes[row * 5 + (col - 1)].innerHTML = "";
+                    day_boxes[row * 5 + (col - 1)].hasEvent = false;
                 } else if (box_date < 10) {
                     day_boxes[row * 5 + (col - 1)].innerHTML = "0" + box_date;
                 } else {
